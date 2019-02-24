@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
 <!--
   Licensed under the Apache License, Version 2.0 (the "License");
@@ -19,14 +19,23 @@
 <configuration>
 
     <property>
-      <name>fs.defaultFS</name>
-      <value>hdfs://hacluster</value>
+      <name>mapreduce.framework.name</name>
+      <value>yarn</value>
     </property>
 
+    <property>
+      <name>yarn.app.mapreduce.am.staging-dir</name>
+      <value>/opt/logs/hadoop-yarn/staging</value>
+    </property>
 
     <property>
-      <name>hadoop.tmp.dir</name>
-      <value>/opt/data/</value>
+      <name>mapreduce.jobhistory.address</name>
+      <value>hadoop001:10020</value>
+    </property>
+
+    <property>
+      <name>mapreduce.jobhistory.webapp.address</name>
+      <value>hadoop001:19888</value>
     </property>
 
 </configuration>
